@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scottish Premiership 2026/27 Season Update</title>
+    <title>Scottish Premiership 2026/27 | Deep Dive</title>
     <style>
         :root {
             --bg-color: #121212;
@@ -12,6 +12,7 @@
             --accent-celtic: #008751;
             --accent-rangers: #0033a0;
             --accent-hearts: #8c1515;
+            --accent-news: #4a90e2;
             --highlight: #ffd700;
         }
         body {
@@ -25,7 +26,7 @@
             justify-content: center;
         }
         .container {
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
         }
         header {
@@ -36,18 +37,18 @@
         }
         h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--highlight);
         }
         p.subtitle {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #888;
         }
         .section-title {
             font-size: 1.2rem;
             border-left: 4px solid var(--highlight);
             padding-left: 10px;
-            margin: 30px 0 15px 0;
+            margin: 40px 0 15px 0;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -77,6 +78,7 @@
         .celtic { color: var(--accent-celtic); }
         .rangers { color: var(--accent-rangers); }
         .hearts { color: var(--accent-hearts); }
+        .news { color: var(--accent-news); }
         
         .stats {
             display: grid;
@@ -95,6 +97,22 @@
             font-size: 1.1rem;
             font-weight: bold;
             color: var(--highlight);
+        }
+        .tactics-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        .tactic-item {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .tactic-item:last-child { border-bottom: none; }
+        .tactic-label {
+            font-weight: bold;
+            color: var(--highlight);
+            display: block;
+            margin-bottom: 4px;
         }
         .player-card {
             display: flex;
@@ -118,6 +136,17 @@
             color: #000;
             font-weight: bold;
             margin-left: 5px;
+        }
+        .news-item {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .news-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--accent-news);
+            display: block;
         }
         footer {
             text-align: center;
@@ -174,6 +203,24 @@
             <p style="font-size: 0.9rem; margin-top: 15px;">On the heels of the leaders. Their recent surge in form makes them the most dangerous challenger in the league right now.</p>
         </div>
 
+        <div class="section-title">Tactical Breakdown</div>
+        <div class="card">
+            <div class="tactics-grid">
+                <div class="tactic-item">
+                    <span class="tactic-label celtic">Celtic: Dominance & Control</span>
+                    <p style="font-size: 0.85rem; margin: 0;">Utilizing a high-possession, possession-centric approach. They focus on controlling the tempo of the match and maintaining a very high defensive line to compress the pitch.</p>
+                </div>
+                <div class="tactic-item">
+                    <span class="tactic-label rangers">Rangers: High-Intensity Transition</span>
+                    <p style="font-size: 0.85rem; margin: 0;">Characterized by explosive movement and rapid transitions. They look to exploit space quickly when winning the ball, leveraging their current winning momentum through direct attacking play.</p>
+                </div>
+                <div class="tactic-item">
+                    <span class="tactic-label hearts">Hearts: Organized Resilience</span>
+                    <p style="font-size: 0.85rem; margin: 0;">A disciplined approach built on a compact defensive block. They prioritize structural integrity and are highly efficient when striking on the counter-attack.</p>
+                </div>
+            </div>
+        </div>
+
         <div class="section-title">Overachievers</div>
         <div class="card">
             <div class="team-header">
@@ -192,6 +239,20 @@
                 </div>
             </div>
             <p style="font-size: 0.9rem; margin-top: 10px;">Since his headline move from Hearts, Shankland has been an absolute force, currently leading the betting for the Golden Boot.</p>
+        </div>
+
+        <div class="section-title">League Intelligence</div>
+        <div class="card">
+            <div class="news-item">
+                <span class="news-tag">Rule Change</span>
+                <strong>Old Firm Away Fan Ban</strong>
+                <p style="font-size: 0.85rem; margin: 5px 0 0 0;">For the duration of the 2026/27 season, all scheduled Old Firm clashes (Celtic vs Rangers) will be played without visiting supporters.</p>
+            </div>
+            <div class="news-item">
+                <span class="news-tag">Market Watch</span>
+                <strong>Squad Valuation Shifts</strong>
+                <p style="font-size: 0.85rem; margin: 5px 0 0 0;">Recent market data suggests a significant shift in squad valuations, with Rangers making notable strides in player asset value.</p>
+            </div>
         </div>
 
         <footer>
