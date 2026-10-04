@@ -6,122 +6,224 @@
 <title>Scottish Premiership 2026-27 — Season So Far</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f6f9;color:#1a1a2e;line-height:1.55;padding:20px}
-.wrap{max-width:780px;margin:0 auto}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f6f9;color:#1a1a2e;line-height:1.6;padding:20px}
+.wrap{max-width:820px;margin:0 auto}
 h1{text-align:center;font-size:1.6rem;margin-bottom:4px;color:#0c1e3a}
 .subtitle{text-align:center;font-size:.95rem;color:#6b7280;margin-bottom:24px}
 .hero{display:flex;gap:16px;margin-bottom:28px;flex-wrap:wrap}
-.hero-card{flex:1;min-width:240px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-.hero-card h2{font-size:1.1rem;margin-bottom:8px}
-.hero-card .tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:6px;color:#fff;margin-right:4px;margin-bottom:8px}
-.celtic-tag{background:#008d6c}
-.rangers-tag{background:#0033a0}
-.stat{font-size:1.8rem;font-weight:700}
-.stat-label{font-size:.8rem;color:#6b7280}
-.section-title{font-size:1.15rem;margin:24px 0 10px;color:#0c1e3a;border-left:4px solid #1a6b4a;padding-left:10px}
-.table-wrap{overflow-x:auto;margin-bottom:28px}
-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:560px}
-thead th{background:#0c1e3a;color:#fff;padding:8px 6px;text-align:left;font-weight:600;white-space:nowrap}
+.hero-card{flex:1;min-width:260px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+.hero-card h2{font-size:1.15rem;margin-bottom:8px}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:6px;color:#fff;margin-right:4px;margin-bottom:8px}
+.celtic-tag{background:#008d6c}.rangers-tag{background:#0033a0}.hearts-tag{background:#b91c1c}.neutral-tag{background:#555}
+.stat{font-size:2rem;font-weight:700}.stat-label{font-size:.85rem;color:#6b7280}
+.section-title{font-size:1.15rem;margin:28px 0 12px;color:#0c1e3a;border-left:4px solid #1a6b4a;padding-left:10px}
+.subtitle-h2{font-size:1rem;margin:24px 0 8px;color:#374151;padding-left:10px;border-left:3px solid #d1d5db}
+.table-wrap{overflow-x:auto;margin-bottom:28px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:640px;max-width:820px}
+thead th{background:#0c1e3a;color:#fff;padding:8px 6px;text-align:left;font-weight:600;white-space:nowrap;position:sticky;top:0}
 tbody td{padding:7px 6px;border-bottom:1px solid #e5e7eb;white-space:nowrap}
 tbody tr:nth-child(even){background:#f9fafb}
 tbody tr:hover{background:#e8f5ee}
-.pos-col{font-weight:700;text-align:center;width:32px}
-.club-col{font-weight:600}
-.form-w{color:#0a8752;font-weight:700}
-.form-l{color:#dc2626;font-weight:700}
-.form-d{color:#d97706;font-weight:700}
+.pos-col{font-weight:700;text-align:center;width:32px}.club-col{font-weight:600}
+.form-w{color:#0a8752;font-weight:700}.form-l{color:#dc2626;font-weight:700}.form-d{color:#d97706;font-weight:700}
 .overach{background:#fef3c7 !important;border-left:3px solid #f59e0b !important}
-.standout-name{font-weight:700;color:#1a6b4a}
-.player-card{background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:14px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.player-card .badge{background:#e8f5ee;color:#0a8752;font-size:.8rem;padding:3px 10px;border-radius:8px;font-weight:600;white-space:nowrap}
+.callout{padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:.92rem}
+.callout-green{background:#e8f5ee;border-left:4px solid #1a6b4a}.callout-amber{background:#fffbeb;border-left:4px solid #f59e0b}
+.callout-red{background:#fef2f2;border-left:4px solid #dc2626}
+.callout-gray{background:#f3f4f6;border-left:4px solid #6b7280}
+.callout strong{color:#1a1a2e}
+.player-card{background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:14px;display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.player-badge{font-size:.8rem;padding:3px 10px;border-radius:8px;font-weight:600;color:#fff;white-space:nowrap;flex-shrink:0}
 .player-card .info{flex:1;min-width:200px}
 .player-card .name{font-weight:700;font-size:1rem;margin-bottom:2px}
 .player-card .desc{font-size:.9rem;color:#374151}
-.callout{background:#e8f5ee;border-left:4px solid #1a6b4a;padding:14px 18px;border-radius:0 8px 8px 0;margin-bottom:24px;font-size:.95rem}
-.callout strong{color:#0a6b3a}
-.footer{text-align:center;margin-top:28px;font-size:.78rem;color:#9ca3af}
+.tactics-box{background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 1px 4px rgba(0,0,0,.07);margin-bottom:14px}
+.tactics-box h3{font-size:.95rem;color:#0c1e3a;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.tactics-box .formation{background:#e8f5ee;color:#0a6b3a;font-size:.78rem;padding:2px 8px;border-radius:6px;font-weight:600}
+.tactics-box p{font-size:.9rem;color:#374151;margin-bottom:4px}
+.key-fact{background:#f0fdf4;border-left:3px solid #22c55e;padding:8px 12px;border-radius:0 6px 6px 0;font-size:.88rem;margin:8px 0}
+.warning-box{background:#fefce8;border:1px solid #fde04e;border-radius:8px;padding:12px 16px;margin:12px 0;font-size:.9rem}
+.footer{text-align:center;margin-top:32px;font-size:.78rem;color:#9ca3af;line-height:1.5}
+@media(max-width:600px){
+  .hero{flex-direction:column}.wrap{padding:0 4px}
+  table{font-size:.78rem}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <h1>Scottish Premiership 2026-27</h1>
-<p class="subtitle">Season review after Matchweek 7 — as of 4 October 2026</p>
+<p class="subtitle">Comprehensive season review after Matchweek 7 — as of 4 October 2026</p>
 
-<!-- HERO: Celtic & Rangers -->
-<div class="hero">
-<div class="hero-card">
-<span class="tag celtic-tag">Celtic</span><br>
-<span class="stat">18</span><span class="stat-label">&nbsp;pts (W6 D0 L1)</span>
-<p style="margin-top:10px;font-size:.9rem;color:#374151">Top of the table. Only blemish was opening-day defeat. Unbeaten in last 5, all wins. Martin O'Neill under contract uncertainty.</p>
-</div>
-<div class="hero-card">
-<span class="tag rangers-tag">Rangers</span><br>
-<span class="stat">16</span><span class="stat-label">&nbsp;pts (W5 D1 L1)</span>
-<p style="margin-top:10px;font-size:.9rem;color:#374151">Close behind. Five straight wins including a 1-0 Old Firm away win at Celtic Park. Best away record in the league. Lawrence Shankland moved here from Hearts this summer.</p>
-</div>
-</div>
-
-<!-- TABLE -->
-<p class="section-title">Full League Table (after 7 games)</p>
+<!-- LEAGUE TABLE -->
+<p class="section-title">League Table (after 7 games)</p>
 <div class="table-wrap">
 <table>
 <thead><tr><th>#</th><th>Club</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>+/-</th><th>Pts</th><th>Form (6)</th></tr></thead>
 <tbody>
 <tr style="background:#e8f5ee"><td class="pos-col">1</td><td class="club-col">Celtic</td><td>7</td><td>6</td><td>0</td><td>1</td><td>14</td><td>4</td><td>+10</td><td>18</td><td><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-l">L</span></td></tr>
 <tr style="background:#e8f5ee"><td class="pos-col">2</td><td class="club-col">Rangers</td><td>7</td><td>5</td><td>1</td><td>1</td><td>18</td><td>4</td><td>+14</td><td>16</td><td><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-d">D</span></td></tr>
-<tr><td class="pos-col">3</td><td class="club-col standout-name">Hearts</td><td>7</td><td>4</td><td>1</td><td>2</td><td>14</td><td>8</td><td>+6</td><td>13</td><td><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-d">D</span></td></tr>
-<tr><td class="pos-col">4</td><td class="club-col standout-name">Dundee</td><td>7</td><td>3</td><td>1</td><td>3</td><td>9</td><td>7</td><td>+2</td><td>10</td><td><span class="form-w">W</span><span class="form-l">L</span><span class="form-d">D</span><span class="form-l">L</span><span class="form-w">W</span></td></tr>
-<tr><td class="pos-col">5</td><td class="club-col standout-name">St Mirren</td><td>7</td><td>3</td><td>1</td><td>3</td><td>8</td><td>9</td><td>-1</td><td>10</td><td><span class="form-w">W</span><span class="form-d">D</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-l">L</span></td></tr>
-<tr><td class="pos-col">6</td><td class="club-col">St Johnstone</td><td>7</td><td>2</td><td>2</td><td>3</td><td>9</td><td>10</td><td>-1</td><td>8</td><td><span class="form-l">L</span><span class="form-l">L</span><span class="form-d">D</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-d">D</span></td></tr>
+<tr style="background:#fef3c7"><td class="pos-col">3</td><td class="club-col" style="color:#b91c1c;font-weight:700">Hearts</td><td>7</td><td>4</td><td>1</td><td>2</td><td>14</td><td>8</td><td>+6</td><td>13</td><td><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-d">D</span></td></tr>
+<tr><td class="pos-col">4</td><td class="club-col" style="color:#1e40af;font-weight:600">Dundee</td><td>7</td><td>3</td><td>1</td><td>3</td><td>9</td><td>7</td><td>+2</td><td>10</td><td><span class="form-w">W</span><span class="form-l">L</span><span class="form-d">D</span><span class="form-l">L</span><span class="form-w">W</span></td></tr>
+<tr><td class="pos-col">5</td><td class="club-col" style="color:#7c2d12;font-weight:600">St Mirren</td><td>7</td><td>3</td><td>1</td><td>3</td><td>8</td><td>9</td><td>-1</td><td>10</td><td><span class="form-w">W</span><span class="form-d">D</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-l">L</span></td></tr>
+<tr><td class="pos-col">6</td><td class="club-col">St Johnstone</td><td>7</td><td>2</td><td>2</td><td>3</td><td>9</td><td>10</td><td>-1</td><td>8</td><td><span class="form-l">L</span><span class="form-l">L</span><span class="form-d">D</span><span class="form-w">W</span></td></tr>
 <tr><td class="pos-col">7</td><td class="club-col">Aberdeen</td><td>7</td><td>2</td><td>2</td><td>3</td><td>7</td><td>8</td><td>-1</td><td>8</td><td><span class="form-l">L</span><span class="form-l">L</span><span class="form-d">D</span><span class="form-w">W</span></td></tr>
 <tr><td class="pos-col">8</td><td class="club-col">Dundee Utd</td><td>7</td><td>2</td><td>2</td><td>3</td><td>9</td><td>11</td><td>-2</td><td>8</td><td><span class="form-l">L</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-d">D</span></td></tr>
 <tr><td class="pos-col">9</td><td class="club-col">Motherwell</td><td>7</td><td>2</td><td>2</td><td>3</td><td>9</td><td>11</td><td>-2</td><td>8</td><td><span class="form-d">D</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-l">L</span></td></tr>
 <tr><td class="pos-col">10</td><td class="club-col">Hibernian</td><td>7</td><td>2</td><td>1</td><td>4</td><td>8</td><td>11</td><td>-3</td><td>7</td><td><span class="form-w">W</span><span class="form-l">L</span><span class="form-l">L</span></td></tr>
 <tr><td class="pos-col">11</td><td class="club-col">Falkirk</td><td>7</td><td>1</td><td>3</td><td>3</td><td>6</td><td>9</td><td>-3</td><td>6</td><td><span class="form-l">L</span><span class="form-d">L</span></td></tr>
-<tr><td class="pos-col">12</td><td class="club-col">Kilmarnock</td><td>7</td><td>1</td><td>2</td><td>4</td><td>6</td><td>15</td><td>-9</td><td>5</td><td><span class="form-l">L</span><span class="form-l">L</span></td></tr>
+<tr><td class="pos-col">12</td><td class="club-col" style="color:#dc2626;font-weight:600">Kilmarnock</td><td>7</td><td>1</td><td>2</td><td>4</td><td>6</td><td>15</td><td>-9</td><td>5</td><td><span class="form-l">L</span><span class="form-l">L</span></td></tr>
 </tbody>
 </table>
+</div>
+
+<!-- HERO CELTIC & RANGERS -->
+<p class="section-title">The Battle of the Old Firm</p>
+<div class="hero">
+<div class="hero-card">
+<span class="tag celtic-tag">Celtic</span><br>
+<span class="stat">18</span><span class="stat-label">&nbsp;pts (W6 D0 L1)</span>
+<p style="margin-top:10px;font-size:.9rem;color:#374151"><strong>Home:</strong> 9 pts from 3 games (3W) <br><strong>Away:</strong> 9 pts from 3 games (3W) <br>GD +10, only 4 goals conceded</p>
+<p style="margin-top:6px;font-size:.88rem;color:#6b7280"><em>Martin O'Neill under contract uncertainty despite winning last season's title.</em></p>
+</div>
+<div class="hero-card">
+<span class="tag rangers-tag">Rangers</span><br>
+<span class="stat">16</span><span class="stat-label">&nbsp;pts (W5 D1 L1)</span>
+<p style="margin-top:10px;font-size:.9rem;color:#374151"><strong>Home:</strong> 6 pts from 3 games (2W 1L) <br><strong>Away:</strong> 10 pts from 4 games (top of away table) <br>GD +14, best attack in the league</p>
+<p style="margin-top:6px;font-size:.88rem;color:#6b7280"><em>Five straight wins including a statement 1-0 victory at Celtic Park.</em></p>
+</div>
+</div>
+
+<!-- TACTICS SECTION -->
+<p class="section-title">Tactics &amp; Style of Play by Team</p>
+
+<div class="tactics-box">
+<h3>Celtic <span class="formation">4-3-3 (shifting to 3-5-2 or 4-4-2?)</span></h3>
+<p>Martin O'Neill started the season in a familiar 4-3-3 but is actively considering switching shape. The problem: two summer signings — Colombia winger <strong>Camilo Durán</strong> (£10m) and Danish striker <strong>Kasper Hogh</strong> (£7m), a combined £17m purchase — don't fit together comfortably in a 4-3-3.</p>
+<p>Duran is ineffective from the right flank in that system, while Hogh struggles as a lone centre-forward. O'Neill has teased moving to a <strong>3-5-2</strong> or <strong>4-4-2 diamond</strong> to unlock the Durán–Hogh partnership, which he's already compared to the legendary Henrik Larsson–Chris Sutton strike force.</p>
+<p><strong>Key observation:</strong> O'Neill likened Durán's playing style to Daizen Maeda — high intensity, pressing from the front. Camilo Durán inspired Celtic's 3-0 win over Aberdeen in particular. Benjamin Nygren remains their assist leader and creative hub in midfield.</p>
+</div>
+
+<div class="tactics-box">
+<h3>Rangers <span class="formation">4-2-3-1 / 3-5-2</span></h3>
+<p>Rangers look the sharpest of any team coming into this season. They started with a hard 1-1 draw at Dundee United (their only result before their five-game winning streak), then found their rhythm completely.</p>
+<p>The marquee signing was <strong>Lawrence Shankland</strong>, who left Hearts for £9.5m and heads the betting to be the league's top scorer. He played well early on, but suffered a hamstring injury during the 1-0 win over Motherwell — expected out until 2027. Cameron Kelsy has been warned he must step up as a £9.5m-level striker.</p>
+<p><strong>Ryan Naderi</strong> has emerged as Rangers' clutch performer: scored against Celtic at Celtic Park (no away fans present due to ban), then came off the bench in the Motherwell game to score the winner when Shankland was forced off. A statement signing on a temporary basis.</p>
+</div>
+
+<div class="tactics-box">
+<h3>Hearts <span class="formation">4-3-3 / 4-2-3-1 (Vrancken style)</span></h3>
+<p><strong>The biggest overachievers this season.</strong> New manager Wouter Vrancken inherited a team written off before kickoff. He started with three consecutive losses — including a capitulation at Aberdeen despite controlling the game — but since then, a complete turnaround.</p>
+<p>Vrancken's Hearts play a high-pressing, possession-based system that forces mistakes. The style is reminiscent of his Ajax DNA — quick transitions, aggressive pressing, and building from the back. Their home record has been perfect (3 wins from 3 games, 9 pts).</p>
+<p>The highlight: a crushing <strong>3-1 victory at Hibernian in the Edinburgh derby</strong>, their first win in that fixture under Vrancken. They've gone seven matches unbeaten across all competitions since the opening losses. If this continues, another Hearts shock is very possible.</p>
+</div>
+
+<div class="tactics-box">
+<h3>Dundee United <span class="formation">New style: 4-3-3 build-up</span></h3>
+<p><strong>Tactical transformation under Jim Goodwin.</strong> The Terrors have completely changed their identity this season. Where they previously relied on direct play, Goodwin has mandated short passing, playing out from the back, and choreographed midfield rotations.</p>
+<p>Summer signing <strong>Dylan Tait</strong> (from Falkirk) is the tactical linchpin at the heart of this new approach. The opening-day 1-1 draw with Rangers showed their ambition — they actually drew with one of the league's best teams using their new style.</p>
+<p><strong>Caveat:</strong> This represents a massive philosophical shift and carries risk against more physical opponents.</p>
+</div>
+
+<div class="tactics-box">
+<h3>Aberdeen <span class="formation">4-4-2 / 3-5-2 (McInnes)</span></h3>
+<p>Stephen Robinson has left, <strong>Derek McInnes</strong> takes the reins. The Dons showed resilience early — beating Hearts 2-1 in an opening-day drama despite being outplayed — but have struggled to sustain momentum. Their defensive record (8 conceded in 7) is solid but their attack has lacked a cutting edge with just 7 goals.</p>
+</div>
+
+<div class="tactics-box">
+<h3>Dundee <span class="formation">5-3-2 / 3-4-3 (Pressley)</span></h3>
+<p><strong>Massive improvement on last season.</strong> Head coach Steven Pressley has them competitive — they were competitive at Celtic Park for large spells. But Pressley admits the squad is four players short of what he needs. The aim is to add quality loan players in forward areas to replicate last term's success with Cameron Congreve, Yan Dhanda, and Tony Yogane.</p>
+</div>
+
+<div class="tactics-box">
+<h3>St Mirren <span class="formation">4-2-3-1</span></h3>
+<p><strong>Another overachiever.</strong> Excellent first-half form — best home PPG at the mid-table cut. Killian Phillips has been their talisman: top scorer in the league so far, already in the golden-boot conversation after just 7 games. They had a slight dip recently (3 losses in last 4) but remain competitive with 10 points.</p>
+</div>
+
+<div class="tactics-box">
+<h3>Falkirk <span class="formation">Traditional 4-4-2</span></h3>
+<p><strong>Classic second-season syndrome.</strong> After guiding the Bairns to a top-six finish on promotion last season, John McGlynn faces a much harder task this year. The loss of key performers like Barney Stewart, Calvin Miller, Filip Lissah and Tait has been felt badly. They've shown their promoted side can still compete (drawing Dundee Utd at home), but the gap is closing.</p>
 </div>
 
 <!-- OVERACHIEVERS -->
 <p class="section-title">Overachievers So Far</p>
 
-<div class="callout">
-<strong>Hearts — 3rd, 13 pts.</strong> New manager Wouter Vrancken has them firing at home: a perfect record through three games (9 pts). They were written off before kickoff but are firmly in the "three-horse race" conversation alongside Celtic and Rangers. If this runs to form, expect another Hearts shock.
+<div class="callout callout-green">
+<strong>🔥 Hearts — 3rd, 13 pts.</strong> New manager Wouter Vrancken has them playing like title challengers. Three straight league losses to start followed by a complete turnaround. Perfect home record (9/9), seven matches unbeaten across all competitions. Their first Edinburgh derby win under Vrancken was crushing: 3-1 away at Hibernian. This is the "another Hearts shock" storyline that pundits predicted — and they're making it real.
 </div>
 
-<div class="callout">
-<strong>Dundee — 4th, 10 pts.</strong> Unseeded and unheralded at the start of the season, but an early-season win streak got them into a comfortable mid-table groove with more than a point per game. Tough to maintain against tougher runs, so far so good.
+<div class="callout callout-green">
+<strong>🔥 Dundee — 4th, 10 pts.</strong> Were the bookies' favourites for relegation just 12 months ago. Now competitive at Celtic Park and sitting firmly mid-table with more than a point per game. Steven Pressley's work is impressive given he describes his squad as four players short of what they need. Tough run ahead — this might not last, but what an improvement already.
 </div>
 
-<div class="callout">
-<strong>St Mirren — 5th, 10 pts.</strong> Also over-performing relative to expectations. Their top scorer Killian Phillips is already in the golden-boot conversation with a healthy tally this early in the season. Excellent first-half form (best home PPG at half-table) before a slight dip.
+<div class="callout callout-green">
+<strong>🔥 St Mirren — 5th, 10 pts.</strong> Excellent first-half form before a slight dip. Killian Phillips has been phenomenal — top scorer in the league. They were promotion favourites on paper but over-delivering so far with their best home PPG at the mid-table cut.
+</div>
+
+<div class="callout callout-gray">
+<strong>⚠️ Dundee United — tactical gamble paying off.</strong> The complete philosophical shift under Jim Goodwin (from direct to possession-based) is risky in Scotland's physical league, but Dylan Tait is making it work so far. A 1-1 draw with Rangers using a new style says a lot. Keep watching this one.
 </div>
 
 <!-- STANDOUT PLAYERS -->
 <p class="section-title">Standout Players</p>
 
 <div class="player-card">
-<div class="badge" style="background:#0033a0;color:#fff">Rangers</div>
-<div class="info"><div class="name">Lawrence Shankland</div><div class="desc">Striker who moved from Hearts to Rangers this summer. Head of the goalscorer betting markets and looking every the part — a marquee signing delivering early.</div></div>
+<div class="player-badge" style="background:#0033a0">Rangers striker</div>
+<div class="info"><div class="name">Lawrence Shankland</div><div class="desc">Head of the goalscorer betting markets. Signed from Hearts for £9.5m — a marquee transfer delivering early. Hamstring injury rules him out until 2027, but his impact this season has been immediate and significant.</div></div>
 </div>
 
 <div class="player-card">
-<div class="badge" style="background:#008d6c;color:#fff">Celtic</div>
-<div class="info"><div class="name">Benjamin Nygren</div><div class="desc">Celtic's assist leader so far this season. Key creative spark in Martin O'Neill's midfield, consistently feeding the attack.</div></div>
+<div class="player-badge" style="background:#b91c1c">Hearts striker</div>
+<div class="info"><div class="name">Killian Phillips</div><div class="desc">Top scorer in the league from St Mirren. Remarkable output for a player at an outside club — already in the golden-boot conversation after just 7 games. The standout goalscorer story of the season so far.</div></div>
 </div>
 
 <div class="player-card">
-<div class="badge" style="background:#b91c1c;color:#fff">St Mirren</div>
-<div class="info"><div class="name">Killian Phillips</div><div class="desc">Top scorer in the league from St Mirren — remarkable output for a club outside the Old Firm. Already in the golden-boot conversation after just 7 games.</div></div>
+<div class="player-badge" style="background:#008d6c">Celtic midfielder</div>
+<div class="info"><div class="name">Benjamin Nygren</div><div class="desc">Celtic's assist leader and creative hub. Key spark in Martin O'Neill's midfield, consistently finding the right pass to unlock defenses.</div></div>
 </div>
 
-<div class="callout" style="background:#fef3c7;border-left-color:#f59e0b">
-<strong>Notable mention:</strong> Ryan Naderi — Rangers' match-winner in the 1-0 Old Firm victory at Celtic Park. The goal was his and the performance a statement of intent.
+<div class="player-card">
+<div class="player-badge" style="background:#0033a0">Rangers forward</div>
+<div class="info"><div class="name">Ryan Naderi</div><div class="desc">Clutch performer on loan. Scored the winner at Celtic Park (Old Firm) and came off the bench to score against Motherwell when Shankland was injured. Big-name signing under pressure — delivering so far.</div></div>
 </div>
 
-<p class="footer">Data sourced from The Fishy &amp; Sky Sports as of 4 October 2026.</p>
+<div class="player-card">
+<div class="player-badge" style="background:#008d6c">Celtic forward</div>
+<div class="info"><div class="name">Camilo Durán</div><div class="desc">Celtic's £10m Colombian signing. O'Neill sees parallels to Maeda's high-intensity game. Inspired the 3-0 Aberdeen win. The key question remains: can he and Hogh work together in a new formation?</div></div>
+</div>
+
+<div class="player-card">
+<div class="player-badge" style="background:#7c2d12">St Mirren midfielder</div>
+<div class="info"><div class="name">Dylan Tait (now D. United)</div><div class="desc">Midfield engine at Dundee United's new-look system. Transferred from Falkirk this summer and is the heartbeat of Goodwin's possession-based approach. Short-passing, playing out from the back — it all runs through him.</div></div>
+</div>
+
+<!-- SPECIAL STORYLINES -->
+<p class="section-title">Special Storylines This Season</p>
+
+<div class="callout callout-red">
+<strong>🚫 Old Firm away fans banned.</strong> Celtic and Rangers are both banned from sending away supporters to Old Firm derbies this season following crowd trouble at the Scottish Cup quarter-final at Ibrox in March. The matches have been played behind closed doors with dozens of arrests made after fan clashes. This is a significant security situation for one of world football's most famous rivalries.
+</div>
+
+<div class="callout callout-amber">
+<strong>🔄 Celtic management uncertainty.</strong> Martin O'Neill won the title last season but reports suggest he may leave Celtic at the end of this campaign. The club is reportedly already in talks with potential replacements — including a "kamikaze" 4-3-3 specialist manager (likely referring to a Scandinavian coach). A turbulent off-season backdrop to an on-pitch title defence.
+</div>
+
+<div class="callout callout-amber">
+<strong>📊 Aberdeen managerial change.</strong> Stephen Robinson has departed, with Derek McInnes appointed as the new manager. The early results (8 pts from 7) suggest a transitional period, but beating Hearts in opening day drama showed his side can still produce big-game results.
+</div>
+
+<div class="callout callout-gray">
+<strong>🏆 Title conversation: three-horse race?</strong> While Celtic and Rangers are the clear favourites (18 and 16 pts), Hearts' home form and Vrancken's tactical influence have put them genuinely in the conversation. If they can keep their home record perfect, a third contender is possible — a genuine "three-horse race" which hasn't been common in recent Scottish Premiership history.
+</div>
+
+<!-- KEY FACTS -->
+<p class="section-title">Season at a Glance</p>
+<div class="key-fact">🏟️ <strong>Total goals after 7 matchweeks:</strong> High-scoring season — roughly 2.5+ goals per game on average.</div>
+<div class="key-fact">🇬🇧 Sky Sports now broadcasting live coverage of every William Hill Premiership fixture for the first time.</div>
+<div class="key-fact">📢 Last season's title was decided on the final day — Celtic dramatically clinched it. The dramatic finish sets up another compelling finale story this year.</div>
+
+<p class="footer">Data sourced from The Fishy, Sky Sports, ESPN, BBC, and The Guardian as of 4 October 2026.<br>Tactical analysis based on match reports and manager interviews across multiple outlets.</p>
 
 </div>
 </body>
