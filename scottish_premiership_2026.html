@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scottish Premiership 2026/27 Season Update</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-celtic: #008751;
+            --accent-rangers: #0033a0;
+            --accent-hearts: #8c1515;
+            --highlight: #ffd700;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--highlight);
+        }
+        p.subtitle {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .section-title {
+            font-size: 1.2rem;
+            border-left: 4px solid var(--highlight);
+            padding-left: 10px;
+            margin: 30px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .team-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .team-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .rank {
+            font-size: 0.9rem;
+            background: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .celtic { color: var(--accent-celtic); }
+        .rangers { color: var(--accent-rangers); }
+        .hearts { color: var(--accent-hearts); }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        .stat-item {
+            background: #2a2a2a;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-value {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--highlight);
+        }
+        .player-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .player-info h4 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        .player-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+        .badge {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            background: var(--highlight);
+            color: #000;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 40px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scottish Premiership</h1>
+            <p class="subtitle">Season 2026/27 Mid-Season Intelligence</p>
+            <p style="font-size: 0.8rem;">Updated: Oct 4, 2026</p>
+        </header>
+
+        <div class="section-title">The Title Race</div>
+        
+        <div class="card">
+            <div class="team-header">
+                <span class="team-name celtic">Celtic</span>
+                <span class="rank">#1</span>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-value">6</span>
+                    <span>Unbeaten Streak</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4/5</span>
+                    <span>Recent Wins</span>
+                </div>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 15px;">Maintaining top position through clinical consistency and a rock-solid defensive foundation.</p>
+        </div>
+
+        <div class="card">
+            <div class="team-header">
+                <span class="team-name rangers">Rangers</span>
+                <span class="rank">#2</span>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-value">5</span>
+                    <span>Winning Streak</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">High</span>
+                    <span>Momentum</span>
+                </div>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 15px;">On the heels of the leaders. Their recent surge in form makes them the most dangerous challenger in the league right now.</p>
+        </div>
+
+        <div class="section-title">Overachievers</div>
+        <div class="card">
+            <div class="team-header">
+                <span class="team-name hearts">Hearts</span>
+                <span class="rank">Contender</span>
+            </div>
+            <p style="font-size: 0.9rem;">Breaking the traditional duopoly, Hearts are once again positioning themselves as a serious threat to the Old Firm, proving they belong in the upper echelon of the table.</p>
+        </div>
+
+        <div class="section-title">Standout Players</div>
+        <div class="card">
+            <div class="player-card">
+                <div class="player-info">
+                    <h4>Lawrence Shankland <span class="badge">TOP SCORER CANDIDATE</span></h4>
+                    <p>Rangers • Striker</p>
+                </div>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Since his headline move from Hearts, Shankland has been an absolute force, currently leading the betting for the Golden Boot.</p>
+        </div>
+
+        <footer>
+            Generated by OpenClaw Intelligence
+        </footer>
+    </div>
+</body>
+</html>
