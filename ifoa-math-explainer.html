@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFoA Actuarial Mathematics Roadmap</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f9;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #1a3a5f 0%, #2a5298 100%);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 2.2em; }
+        h2 { color: #1a3a5f; border-bottom: 2px solid #2a5298; padding-bottom: 5px; margin-top: 40px; }
+        h3 { color: #2a5298; }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .math-box {
+            background-color: #eef2f7;
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            font-family: "Courier New", Courier, monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .example {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+        .tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>IFoA Actuarial Mathematics</h1>
+    <p>A Roadmap of Mathematical Competencies</p>
+</header>
+
+<p>Becoming an actuary requires transitioning from "calculating" to "modelling." The IFoA curriculum progresses from foundational calculus and probability to complex stochastic processes and statistical inference.</p>
+
+<div class="card">
+    <span class="tag">CORE FOUNDATION</span>
+    <h2>1. Calculus &amp; Algebra</h2>
+    <p>The language of change and accumulation. You need this to model continuous cash flows and optimize risk.</p>
+    <h3>Key Concepts:</h3>
+    <ul>
+        <li><strong>Differentiation:</strong> Finding rates of change and local maxima/minima (critical for optimization).</li>
+        <li><strong>Integration:</strong> Calculating areas under curves—essential for finding probabilities and continuous present values.</li>
+        <li><strong>Series:</strong> Summing infinite sequences (e.g., geometric series for perpetuities).</li>
+    </ul>
+    <div class="math-box">
+        Continuous Probability Density: P(a &lt; X &lt; b) = ∫[a to b] f(x) dx
+    </div>
+    <div class="example">
+        <strong>Example:</strong> Finding the expected value of a continuous variable: E[X] = ∫ x · f(x) dx.
+    </div>
+</div>
+
+<div class="card">
+    <span class="tag">CS1 &amp; CS2</span>
+    <h2>2. Probability &amp; Statistics</h2>
+    <p>The core of modern actuarial science. This is how we handle uncertainty and draw conclusions from data.</p>
+    <h3>Key Concepts:</h3>
+    <ul>
+        <li><strong>Probability Distributions:</strong> Discrete (Poisson, Binomial) and Continuous (Normal, Exponential, Gamma).</li>
+        <li><strong>Statistical Inference:</strong> Parameter estimation (MLE, Method of Moments) and Hypothesis Testing.</li>
+        <li><strong>Regression:</strong> Modeling the relationship between variables (e.g., age vs. mortality rate).</li>
+    </ul>
+    <div class="math-box">
+        Bayes' Theorem: P(A|B) = [ P(B|A) · P(A) ] / P(B)
+    </div>
+    <div class="example">
+        <strong>Example:</strong> Using a Poisson distribution to model the number of insurance claims in a month.
+    </div>
+</div>
+
+<div class="card">
+    <span class="tag">CM1 &amp; CM2</span>
+    <h2>3. Actuarial Mathematics</h2>
+    <p>Applying probability and calculus to the time value of money and life contingencies.</p>
+    <h3>Key Concepts:</h3>
+    <ul>
+        <li><strong>Financial Mathematics:</strong> Interest rates (nominal vs. effective), annuities, and bond pricing.</li>
+        <li><strong>Life Contingencies:</strong> Modeling survival probabilities and the present value of future life benefits.</li>
+        <li><strong>Loss Models:</strong> Frequency and severity modeling for general insurance.</li>
+    </ul>
+    <div class="math-box">
+        Present Value Factor: v = 1 / (1 + i)
+        Annuity immediate: a_n| = [1 - (1 + i)^-n] / i
+    </div>
+    <div class="example">
+        <strong>Example:</strong> Calculating the premium for a life insurance policy based on the expected present value of future claims.
+    </div>
+</div>
+
+<div class="card">
+    <span class="tag">SP &amp; SA</span>
+    <h2>4. Advanced Stochastic Modelling</h2>
+    <p>At the specialist level, you deal with time-dependent randomness and complex risk structures.</p>
+    <h3>Key Concepts:</h3>
+    <ul>
+        <li><strong>Stochastic Processes:</strong> Markov Chains, Brownian Motion, and Poisson Processes.</li>
+        <li><strong>Time Series:</strong> ARIMA models and volatility modeling.</li>
+        <li><strong>Risk Theory:</strong> Ruin theory and aggregate loss distributions.</li>
+    </ul>
+    <div class="math-box">
+        Markov Transition: P(X_n+1 = j | X_n = i) = p_ij
+    </div>
+    <div class="example">
+        <strong>Example:</strong> Using a Markov chain to model a policyholder moving between "Healthy", "Ill", and "Deceased" states.
+    </div>
+</div>
+
+<footer>
+    <p>Created for Actuarial Study Roadmap</p>
+</footer>
+
+</body>
+</html>
